@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.leftSection {
+    background: linear-gradient(135deg, #00bcd4, #26c6da);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+
+.leftSection h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 0 5px 8px rgba(0,0,0,0.1);
+}
+
+.leftSection p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 400px;
+    opacity: 0.95;
+    text-shadow: 0 5px 8px rgba(0,0,0,0.1);
+
+}
+
+.rightSection {
+    flex: 1;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+}
+
+.contactForm h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.requiredText {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius:0px;
+    background: #e0e0e0;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    background: #d5d5d5;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #999;
+    font-size: 1rem;
+}
+
+.formGroup textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #00bcd4, #26c6da);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+    background: linear-gradient(135deg, #0097a7, #00acc1);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .leftSection {
+        flex: none;
+        height: 40vh;
+        padding: 20px;
+    }
+    
+    .leftSection h1 {
+        font-size: 2.5rem;
+    }
+    
+    .leftSection p {
+        font-size: 1rem;
+    }
+    
+    .rightSection {
+        flex: none;
+        height: 60vh;
+        padding: 40px 30px;
+        overflow-y: auto;
+    }
+    
+    .contactForm h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .leftSection h1 {
+        font-size: 2rem;
+    }
+    
+    .rightSection {
+        padding: 30px 20px;
+    }
+    
+    .contactForm h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 15px;
+    }
+}
